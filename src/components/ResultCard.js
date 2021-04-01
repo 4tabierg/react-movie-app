@@ -1,5 +1,4 @@
 import React, {useContext} from 'react'
-import Button from '@material-ui/core/Button'
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import AppContext from '../context/AppContext';
@@ -50,23 +49,38 @@ export const ResultCard = ({ movie }) => {
                     </h4>
                 </div>
                     {favoritesCheck ? 
-                    <Button
-                    startIcon= {<HighlightOffIcon/>}
-                    style={{width: '250px', marginBottom: '30px', marginLeft: '110px', backgroundColor: '#E50914', color: '#fff'}}
+                    <button
+                    className='btn-remove'
                     onClick={() => handleRemoveMovie(movie)}
                     >
                         Remove From Favorites
-                    </Button> :
-                    <Button
-                    startIcon= {<AddCircleOutlineIcon />}
-                    style={{width: '200px', marginBottom: '30px', marginLeft: '160px', backgroundColor: '#041c45', color: '#fff'}}
+                    </button> :
+                    <button
+                    className='btn'
                     onClick={() => handleAddMovie(movie)}
                     >
                         Add To Favorites
-                    </Button>
+                    </button>
                 }
             </div>
         </div>
     )
 }
 
+
+// {favoritesCheck ? 
+//     <Button
+//     startIcon= {<HighlightOffIcon/>}
+//     style={{width: '250px', marginBottom: '30px', marginLeft: '110px', backgroundColor: '#E50914', color: '#fff'}}
+//     onClick={() => handleRemoveMovie(movie)}
+//     >
+//         Remove From Favorites
+//     </Button> :
+//     <Button
+//     startIcon= {<AddCircleOutlineIcon />}
+//     style={{width: '200px', marginBottom: '30px', marginLeft: '160px', backgroundColor: '#041c45', color: '#fff'}}
+//     onClick={() => handleAddMovie(movie)}
+//     >
+//         Add To Favorites
+//     </Button>
+// }
