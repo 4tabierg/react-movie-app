@@ -1,6 +1,4 @@
 import React, {useContext} from 'react'
-import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
-import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import AppContext from '../context/AppContext';
 
 
